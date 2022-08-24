@@ -10,10 +10,15 @@ from EBI.
 :return: a dictionary mapping each MI term to its immediate parent.
 """
 def read_mi_tree(mi_file: str) -> dict[str, str]:
-  with open(mi_file) as f:
+  with open(mi_file, encoding='utf-8') as f:
     mi_tree = {}
     test = {}
-  
+
+    '''
+    while line := f.readline():
+      print(line)
+
+    '''
     new_term = None
     for line in f:
       if line[:3] == 'id:':
@@ -27,6 +32,7 @@ def read_mi_tree(mi_file: str) -> dict[str, str]:
           test[parent] = [new_term]
         else:
           test[parent].append(new_term)
+      
 
   #print(test)
   return mi_tree
