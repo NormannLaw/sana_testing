@@ -1,7 +1,7 @@
 # sana_testing
 
 ## Overview
-The goal of this project is to test the Simulating Annealing Network Aligner (SANA) for Protein Protein Interaction Networks (PPINs) by examining how it utilizes graph topology and sequence similarity under different inputs of ideal Edge Correctness (EC) and Sequence Simililarity (Seq). 
+The goal of this project is to test the Simulated Annealing Network Aligner (SANA) for Protein Protein Interaction Networks (PPINs) by examining how it utilizes graph topology and sequence similarity under different inputs of ideal Edge Correctness (EC) and Sequence Simililarity (Seq). 
 
 So far, we have written a network constructor (get_el.py), a protein sequence file consrtuctor (PPI_get_FASTA.py), and a experimental data viewer (sana_read_out_files.py). We are now planning to run SANA multiples times at different Seq inputs and check the output sequence similarity scores. We will also list the Reciprocal Best Hits (RBHs) for each SANA output alignment file.
 
@@ -69,7 +69,7 @@ time ./blast/blastp -query FASTA/SPombe.fasta -db HSapiens -out scores/SPombe_HS
 
 In this example, we made a database based on the human (HSapiens) fasta file using makeblastdb. Then, we run blast 3 times by taking mouse (MMusculus), rat (RNorvegicus), and yeast (SPombe) as queries. 
 
-To submit the shell scripts so that thing can be run in parallel, use the qsub command. For example:
+To submit the shell scripts so that things can be run in parallel, use the qsub command. For example:
 `qsub run_blast_HSapiens.sh`
 
 To check if your submitted job is actually running, use the following command:
